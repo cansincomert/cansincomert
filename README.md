@@ -1,0 +1,294 @@
+<h1 align="center">Hi 👋, I'm Cansın Cömert</h1>
+<h3 align="center">Building AI systems where it's hard — clinical genomics, financial analytics, applied LLMs</h3>
+
+<p align="center">
+  <a href="https://github.com/cansincomert" target="_blank">
+    <img src="https://img.shields.io/github/followers/cansincomert?style=for-the-badge&logo=github&logoColor=white&label=Follow&color=181717" alt="GitHub"/>
+  </a>
+  &nbsp;
+  <a href="mailto:cansincomert@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Reach%20out-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  </a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Istanbul-Türkiye-0B7285?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location"/>
+  &nbsp;
+  <img src="https://komarev.com/ghpvc/?username=cansincomert&style=for-the-badge&color=6f42c1&label=PROFILE+VIEWS" alt="Profile views"/>
+</p>
+
+---
+
+<!-- ======================= -->
+<!--        ABOUT ME         -->
+<!-- ======================= -->
+
+<h3 align="center">🚀 About Me</h3>
+
+<p align="center">
+  🧬 &nbsp;I build <b>clinical genomics infrastructure</b> — FASTQ → VCF → annotation → LLM interpretation, end to end<br/>
+  🤖 &nbsp;MSc research on <b>LLMs for computational biology</b>: long-context variant reasoning, RAG ablations, quantization studies<br/>
+  📈 &nbsp;Also shipping <b>financial analytics</b> — a fund-market terminal with AI-driven insights across web, iOS and Android<br/>
+  🛠 &nbsp;Comfortable across the whole stack: Python pipelines, React frontends, Kotlin/Swift clients, Postgres underneath<br/>
+  ⚡ &nbsp;Most of my work lives in private repos — happy to walk through the architecture, just reach out
+</p>
+
+---
+
+<!-- ======================= -->
+<!--       GITHUB STATS      -->
+<!-- ======================= -->
+
+<h3 align="center">📊 GitHub Stats</h3>
+
+<!--
+  NOTE: github-readme-stats.vercel.app is the shared public instance and is often
+  rate-limited (503). If these two cards show as broken, deploy your own instance
+  (https://github.com/anuraghazra/github-readme-stats#deploy-on-your-own-vercel-instance)
+  and swap the host below. `count_private=true` only counts private commits on a
+  self-hosted instance with your own PAT.
+-->
+<p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=cansincomert&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&theme=tokyonight" alt="GitHub stats"/>
+  &nbsp;
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=cansincomert&layout=compact&langs_count=8&hide_border=true&theme=tokyonight" alt="Top languages"/>
+</p>
+
+<p align="center">
+  <img height="165" src="https://streak-stats.demolab.com?user=cansincomert&hide_border=true&theme=tokyonight" alt="Streak"/>
+</p>
+
+<h3 align="center">📈 Contribution Activity</h3>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=cansincomert&hide_border=true&theme=tokyo-night&area=true" alt="Contribution graph" width="98%"/>
+</p>
+
+<p align="center">
+  <img src="https://ghchart.rshah.org/6f42c1/cansincomert" alt="Contribution chart" width="90%"/>
+</p>
+
+---
+
+<!-- ======================= -->
+<!--        TECH STACK       -->
+<!-- ======================= -->
+
+<h3 align="center">🛠 Tech Stack</h3>
+
+<!-- ======================= -->
+<!--        LANGUAGES        -->
+<!-- ======================= -->
+<h4 align="center">💻 Languages</h4>
+
+<table align="center">
+  <tr>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=python" width="40" height="40"/><br/>
+      <sub><b>Python</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=ts" width="40" height="40"/><br/>
+      <sub><b>TypeScript</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=js" width="40" height="40"/><br/>
+      <sub><b>JavaScript</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/postgresql/4169E1" width="40" height="40"/><br/>
+      <sub><b>SQL</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=kotlin" width="40" height="40"/><br/>
+      <sub><b>Kotlin</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=swift" width="40" height="40"/><br/>
+      <sub><b>Swift</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=java" width="40" height="40"/><br/>
+      <sub><b>Java</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=bash" width="40" height="40"/><br/>
+      <sub><b>Bash</b></sub>
+    </td>
+  </tr>
+</table>
+
+<!-- ======================= -->
+<!--     AI & LLM STACK      -->
+<!-- ======================= -->
+<h4 align="center">🤖 AI & LLM Engineering</h4>
+
+<table align="center">
+  <tr>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=pytorch" width="40" height="40"/><br/>
+      <sub><b>PyTorch</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/huggingface" width="40" height="40"/><br/>
+      <sub><b>Hugging Face</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/ollama/FFFFFF" width="40" height="40"/><br/>
+      <sub><b>Ollama</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/anthropic/D97757" width="40" height="40"/><br/>
+      <sub><b>Claude</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/langchain/1C3C3C" width="40" height="40"/><br/>
+      <sub><b>RAG</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/chromatic/FC521F" width="40" height="40"/><br/>
+      <sub><b>ChromaDB</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/numpy/4DABCF" width="40" height="40"/><br/>
+      <sub><b>NumPy</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/plotly/3F4F75" width="40" height="40"/><br/>
+      <sub><b>Matplotlib</b></sub>
+    </td>
+  </tr>
+</table>
+
+<!-- ======================= -->
+<!--   GENOMICS & DATA       -->
+<!-- ======================= -->
+<h4 align="center">🧬 Genomics & Data Engineering</h4>
+
+<table align="center">
+  <tr>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/biolink/00B140" width="40" height="40"/><br/>
+      <sub><b>VCF / vcfpy</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/bioconductor/3B6EB5" width="40" height="40"/><br/>
+      <sub><b>Ensembl VEP</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/opensourceinitiative/3DA639" width="40" height="40"/><br/>
+      <sub><b>Exomiser</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=postgres" width="40" height="40"/><br/>
+      <sub><b>PostgreSQL</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=supabase" width="40" height="40"/><br/>
+      <sub><b>Supabase</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=sqlite" width="40" height="40"/><br/>
+      <sub><b>SQLite</b></sub>
+    </td>
+  </tr>
+</table>
+
+<!-- ======================= -->
+<!--     WEB & MOBILE        -->
+<!-- ======================= -->
+<h4 align="center">🌐 Web & Mobile</h4>
+
+<table align="center">
+  <tr>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=react" width="40" height="40"/><br/>
+      <sub><b>React</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=vite" width="40" height="40"/><br/>
+      <sub><b>Vite</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=nodejs" width="40" height="40"/><br/>
+      <sub><b>Node.js</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=jest" width="40" height="40"/><br/>
+      <sub><b>Jest</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=html" width="40" height="40"/><br/>
+      <sub><b>HTML5</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=css" width="40" height="40"/><br/>
+      <sub><b>CSS3</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/jetpackcompose/4285F4" width="40" height="40"/><br/>
+      <sub><b>Compose</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/swift/F05138" width="40" height="40"/><br/>
+      <sub><b>SwiftUI</b></sub>
+    </td>
+  </tr>
+</table>
+
+<!-- ======================= -->
+<!--   INFRA & TOOLING       -->
+<!-- ======================= -->
+<h4 align="center">☁️ Infrastructure & Tooling</h4>
+
+<table align="center">
+  <tr>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=docker" width="40" height="40"/><br/>
+      <sub><b>Docker</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=vercel" width="40" height="40"/><br/>
+      <sub><b>Vercel</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=git" width="40" height="40"/><br/>
+      <sub><b>Git</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=github" width="40" height="40"/><br/>
+      <sub><b>GitHub</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=githubactions" width="40" height="40"/><br/>
+      <sub><b>Actions</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=linux" width="40" height="40"/><br/>
+      <sub><b>Linux</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=vscode" width="40" height="40"/><br/>
+      <sub><b>VS Code</b></sub>
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/anthropic/D97757" width="40" height="40"/><br/>
+      <sub><b>Claude Code</b></sub>
+    </td>
+  </tr>
+</table>
+
+---
+
+<!-- ======================= -->
+<!--        CONTACT          -->
+<!-- ======================= -->
+
+<h3 align="center">📫 Let's Connect</h3>
+
+<p align="center">
+  Working on something at the intersection of <b>AI and life sciences</b>, or need a system taken from prototype to production?<br/>
+  <a href="mailto:cansincomert@gmail.com"><b>cansincomert@gmail.com</b></a>
+</p>
+
+<p align="center">
+  <i>"Make it correct, make it reproducible, then make it fast."</i>
+</p>
