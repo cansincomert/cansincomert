@@ -21,7 +21,7 @@ jobs:
         run: |
           if [ -z "$PAT" ]; then
             echo "::error::Secret GH_STATS_TOKEN is not set. Create a classic PAT with"
-            echo "::error::the 'repo' AND 'read:org' scopes and add it at Settings > Secrets and variables > Actions."
+            echo "::error::the 'repo' scope and add it at Settings > Secrets and variables > Actions."
             exit 1
           fi
 

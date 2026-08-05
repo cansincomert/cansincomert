@@ -9,7 +9,8 @@
 # with their own token and can never see private work. This counts the commits
 # directly from each repo's default-branch history instead.
 #
-# Requires: gh CLI authenticated with a token that has `repo` + `read:org` scope.
+# Requires: gh CLI authenticated with a token that has `repo` scope. (`read:org`
+# is only needed if EXCLUDE_RE is relaxed to let org-owned repos back in.)
 # The default GITHUB_TOKEN is scoped to this repo only and CANNOT see your other
 # private repos — the workflow passes a PAT via GH_TOKEN instead.
 set -euo pipefail
