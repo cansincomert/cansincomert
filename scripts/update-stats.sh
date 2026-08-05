@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# Recompute commit stats across EVERY repo the token can see — owned, private,
-# org-owned and collaborations — then rewrite the badge block and the project
-# table between their STATS:/TABLE: markers.
+# Recompute commit stats across EVERY repo the token can see — owned, private
+# and collaborations — then rewrite the badge block between the STATS: markers.
 #
 # Why this exists: GitHub's contribution graph only credits commits in PUBLIC
 # repos unless "Include private contributions on my profile" is enabled, and
@@ -19,7 +18,7 @@ cd "$(dirname "$0")/.."
 
 # Repositories deliberately left out of the counts (extended regex, matched
 # against "owner/name"). Client and employer work that shouldn't be advertised
-# goes here — excluded repos contribute nothing to the badges or the table.
+# goes here — excluded repos contribute nothing to the published badges.
 EXCLUDE_RE='^(Infinium-Vision-Intelligence/|cansincomert/infinium)'
 
 viewer_id=$(gh api graphql -f query='{viewer{id}}' --jq '.data.viewer.id')
@@ -63,34 +62,10 @@ private=$(awk -F'\t' '$1>0 && $3=="true"' "$work/counts.tsv" | wc -l | tr -d ' '
 echo "repos=$repos private=$private mine=$mine total=$total"
 
 COUNTS="$work/counts.tsv" MINE=$mine TOTAL=$total REPOS=$repos PRIVATE=$private python3 - <<'PY'
-import os, re, html
+import os, re
 
 mine, total = os.environ["MINE"], os.environ["TOTAL"]
 repos, private = os.environ["REPOS"], os.environ["PRIVATE"]
-
-# Hand-written blurbs for the projects worth naming; anything else is folded
-# into the "other repositories" row so the table stays readable.
-BLURBS = {
-    "cansincomert/arkafon-be":   "Fund-market analytics backend — TEFAS ingestion, AI market insights",
-    "cansincomert/arkafon-fe":   "Financial analytics terminal — React 18 + Vite + TS, Sankey flow viz",
-    "cansincomert/genomixLLM":   "MSc research — LLMs over FASTQ→VCF, RAG ablations, quantization studies",
-    "cansincomert/karinca-new":  "Headless CMS + component-based JS frontend",
-    "cansincomert/consensio-fe": "Clinical genomics dashboard — variant search & VCF annotation UI",
-    "efedikmen/arkafon":         "Fund analytics platform — collaboration",
-    "cansincomert/arkafon-ios":  "SwiftUI client for the analytics terminal",
-    "cansincomert/studio-fe":    "Design studio site",
-    "cansincomert/consensio":    "Variant frequency database",
-    "cansincomert/swe573":       "Software development practice — semantic tagging app",
-}
-NAMED = 8  # rows to show individually
-
-rows = []
-with open(os.environ["COUNTS"], encoding="utf-8") as fh:
-    for line in fh:
-        my_c, all_c, is_private, full = line.rstrip("\n").split("\t")
-        if int(my_c) > 0:
-            rows.append((int(my_c), int(all_c), is_private == "true", full))
-rows.sort(reverse=True)
 
 badges = f"""<p align="center">
   <img src="https://img.shields.io/badge/Commits%20authored-{mine}-6f42c1?style=for-the-badge&logo=git&logoColor=white" alt="Commits authored"/>
@@ -102,42 +77,17 @@ badges = f"""<p align="center">
   <img src="https://img.shields.io/badge/Commits%20on%20those%20branches-{total}-2f9e44?style=for-the-badge&logo=gitlfs&logoColor=white" alt="Total commits"/>
 </p>"""
 
-lines = ['<table align="center">', '  <tr>',
-         '    <th align="left">Project</th><th align="left">What it is</th><th align="right">My commits</th>',
-         '  </tr>']
-for my_c, _all_c, is_private, full in rows[:NAMED]:
-    name = full.split("/")[-1]
-    lock = " 🔒" if is_private else ""
-    blurb = html.escape(BLURBS.get(full, ""))
-    lines += ['  <tr>',
-              f'    <td><b>{html.escape(name)}</b>{lock}</td>',
-              f'    <td><sub>{blurb}</sub></td>',
-              f'    <td align="right"><b>{my_c}</b></td>',
-              '  </tr>']
-
-rest = rows[NAMED:]
-if rest:
-    rest_commits = sum(r[0] for r in rest)
-    lines += ['  <tr>',
-              f'    <td><b>{len(rest)} other repositories</b></td>',
-              '    <td><sub>Research prototypes, coursework, infrastructure and client work</sub></td>',
-              f'    <td align="right"><b>{rest_commits}</b></td>',
-              '  </tr>']
-lines.append('</table>')
-table = "\n".join(lines)
-
 readme = open("README.md", encoding="utf-8").read()
 original = readme
 
-for marker, block in (("STATS", badges), ("TABLE", table)):
-    readme, n = re.subn(
-        rf"(<!-- {marker}:START[^>]*-->\n).*?(\n<!-- {marker}:END -->)",
-        lambda m, b=block: m.group(1) + b + m.group(2),
-        readme,
-        flags=re.S,
-    )
-    if n == 0:
-        raise SystemExit(f"marker {marker}:START/END not found in README.md")
+readme, n = re.subn(
+    r"(<!-- STATS:START[^>]*-->\n).*?(\n<!-- STATS:END -->)",
+    lambda m: m.group(1) + badges + m.group(2),
+    readme,
+    flags=re.S,
+)
+if n == 0:
+    raise SystemExit("marker STATS:START/END not found in README.md")
 
 if readme == original:
     print("no change")

@@ -32,11 +32,16 @@ jobs:
           chmod +x scripts/update-stats.sh
           ./scripts/update-stats.sh
 
+      - name: Rebuild the contribution calendar
+        env:
+          GH_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
+        run: python3 scripts/build-calendar.py
+
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
+          git add README.md assets/contributions.svg
           git diff --staged --quiet && echo "stats unchanged" && exit 0
           git commit -m "chore: refresh profile stats"
           git push
