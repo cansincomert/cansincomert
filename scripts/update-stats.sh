@@ -16,6 +16,11 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
+# Repositories deliberately left out of the counts (extended regex, matched
+# against "owner/name"). Client and employer work that shouldn't be advertised
+# goes here — excluded repos contribute nothing to the badges or the table.
+EXCLUDE_RE='^(Infinium-Vision-Intelligence/|cansincomert/infinium)'
+
 viewer_id=$(gh api graphql -f query='{viewer{id}}' --jq '.data.viewer.id')
 
 work=$(mktemp -d)
@@ -23,7 +28,10 @@ trap 'rm -rf "$work"' EXIT
 
 # owner + collaborator + organization_member, forks excluded
 gh api "user/repos?affiliation=owner,collaborator,organization_member&per_page=100" --paginate \
-  --jq '.[] | select(.fork==false) | [.full_name, .private] | @tsv' | sort -u > "$work/repos.tsv"
+  --jq '.[] | select(.fork==false) | [.full_name, .private] | @tsv' \
+  | grep -Ev "$EXCLUDE_RE" | sort -u > "$work/repos.tsv"
+
+echo "counting $(wc -l < "$work/repos.tsv") repositories (excluding /$EXCLUDE_RE/)"
 
 : > "$work/counts.tsv"
 
