@@ -59,6 +59,11 @@
 <h3 align="center">📈 GitHub Stats</h3>
 
 <p align="center">
+  <sub>GitHub's own contribution count — commits, pull requests, issues and reviews across every repo since 2022.<br/>
+  The commit figures above measure something narrower: commits only, on default branches.</sub>
+</p>
+
+<p align="center">
   <img height="165" src="https://streak-stats.demolab.com?user=cansincomert&hide_border=true&theme=tokyonight" alt="Streak"/>
 </p>
 
